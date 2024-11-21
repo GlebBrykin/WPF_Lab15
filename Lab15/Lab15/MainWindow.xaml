@@ -1,0 +1,142 @@
+﻿<Window x:Class="Lab15.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab15"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <FlowDocumentScrollViewer>
+            <FlowDocument>
+                <Paragraph TextAlignment="Center" FontWeight="Black" Foreground="DarkBlue">
+                    Особенности различных схем накачки трансформаторов Тесла
+                </Paragraph>
+                <Paragraph>
+                    В зависимости от схемы накачки и параметров трансформатора Тесла можно получить различные эффекты. Разряд может
+                    иметь вид факела (огня), молнии, пики, кисточки.
+                </Paragraph>
+                <Table>
+                    <Table.Columns>
+                        <TableColumn/>
+                        <TableColumn/>
+                    </Table.Columns>
+                    <TableRowGroup>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph TextAlignment="Center" FontWeight="Bold">
+                                    Элементная база
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph TextAlignment="Center" FontWeight="Bold">
+                                    Внешний вид
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph TextAlignment="Center">
+                                    Разрядник (SGTC)
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    <Floater>
+                                        <BlockUIContainer>
+                                            <Image Source="Resources\sgtc.jpg"/>
+                                        </BlockUIContainer>
+                                    </Floater>
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph TextAlignment="Center">
+                                    Электронная лампа (VTTC)
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    <Floater>
+                                        <BlockUIContainer>
+                                            <Image Source="Resources\vttc.jpg"/>
+                                        </BlockUIContainer>
+                                    </Floater>
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph TextAlignment="Center">
+                                    Транзисторы (SSTC)
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    <Floater>
+                                        <BlockUIContainer>
+                                            <Image Source="Resources\sstc2.jpg"/>
+                                        </BlockUIContainer>
+                                    </Floater>
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+                <Paragraph FontStyle="Italic">
+                    Отдельно можно отметить, что наиболее гибкими в настройке являются транзисторные схемы:
+                    они позволяют организовать различные режимы накачки: непрерывную, прерывистую, плавную, а также
+                    аудиомодуляцию. Несмотря на то, что ламповые схемы также обеспечивают эту возможность,
+                    мощность ламповых схем в разы меньше, чем современных транзисторных. Схемы накачки на основе
+                    газовых разрядников, самые старые и простые, всегда работают в импульсном режиме, параметры
+                    накачки при этом трудно предсказать и контролировать.
+                </Paragraph>
+                <Paragraph>
+                    Форма разряда зависит от параметров накачки и рабочей частоты трансформатора Тесла. Возможны
+                    следующие формы разряда:
+                </Paragraph>
+                <List MarkerStyle="Circle">
+                    <ListItem>
+                        <Paragraph>
+                            Факел (пламя)
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Кисточка
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Пика (меч, неразветвлённая прямая молния)
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Молния
+                        </Paragraph>
+                    </ListItem>
+                </List>
+                <Paragraph>
+                    При непрерывной накачке и рабочей частоте выше 15 МГц разряд принимает форму факела, при
+                    более низких частотах и непрерывной накачке разряд имеет форму кисточки: множество расположенных
+                    рядом ветвей. Если накачка производится короткими импульсами, разряд принимает форму обычной молнии,
+                    а если амплитуда напряжения накачки возрастает относительно плавно (в течение сотен
+                    микросекунд-десятков миллисекунд), а рабочая частота превышает 300 кГц, то разряд принимает вид пики.
+                </Paragraph>
+                <Paragraph>
+                    <Floater>
+                        <BlockUIContainer>
+                            <UniformGrid Rows="1" Columns="3">
+                                <Image Source="Resources\sstc.jpg" Width="200" Margin="5"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <Image Source="Resources\sstc2.jpg" Width="200" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <Image Source="Resources\sstc3.jpg" Width="200" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </UniformGrid>
+                        </BlockUIContainer>
+                    </Floater>
+                </Paragraph>
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+    </Grid>
+</Window>
